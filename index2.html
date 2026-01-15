@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>¿Dónde se usa Python?</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@300;400;600&amp;family=Fira+Code:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 1280px;
+            height: 720px;
+            background-color: #0f172a;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: #0f172a; /* Slate 900 */
+            color: white;
+            overflow: hidden;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            background: rgba(30, 41, 59, 0.8);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        }
+        .tech-badge {
+            font-family: 'Fira Code', monospace;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #cbd5e1;
+        }
+        .icon-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 0.75rem;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Decorative Background Elements -->
+<div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#3776AB] rounded-full filter blur-[120px] opacity-10 pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#FFD43B] rounded-full filter blur-[100px] opacity-5 pointer-events-none"></div>
+<!-- Header Section -->
+<div class="px-16 pt-12 pb-6 z-10 flex justify-between items-end">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<span class="bg-[#FFD43B] text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Aplicaciones</span>
+<span class="text-gray-400 text-xs font-['Open_Sans']">Versatilidad</span>
+</div>
+<h2 class="font-['Montserrat'] font-extrabold text-5xl text-white">
+                    ¿Dónde se usa <span class="text-[#3776AB]">Python</span>?
+                </h2>
+</div>
+<div class="text-right">
+<p class="font-['Open_Sans'] text-gray-400 text-sm max-w-md">
+                    Desde servidores web hasta cohetes espaciales, Python está en todas partes.
+                </p>
+</div>
+</div>
+<!-- Main Grid Content -->
+<div class="flex-1 px-16 pb-12 z-10">
+<div class="grid grid-cols-2 gap-6 h-full">
+<!-- Card 1: Web Development -->
+<div class="glass-card rounded-2xl p-6 flex flex-col justify-between group border-l-4 border-[#3776AB]">
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-4">
+<div class="icon-box bg-[#3776AB] bg-opacity-20 text-[#3776AB]">
+<i class="fas fa-globe"></i>
+</div>
+<div>
+<h3 class="font-['Montserrat'] font-bold text-xl text-white mb-1">Desarrollo Web</h3>
+<p class="font-['Open_Sans'] text-gray-400 text-sm leading-relaxed max-w-xs">
+                                    Construcción de backends robustos, APIs RESTful y aplicaciones escalables.
+                                </p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-gray-700">
+<p class="text-xs text-gray-500 mb-2 font-bold uppercase">Frameworks clave:</p>
+<div class="flex flex-wrap gap-2">
+<span class="tech-badge border border-blue-900 text-blue-200">Django</span>
+<span class="tech-badge border border-blue-900 text-blue-200">Flask</span>
+<span class="tech-badge border border-blue-900 text-blue-200">FastAPI</span>
+</div>
+</div>
+</div>
+<!-- Card 2: AI & ML -->
+<div class="glass-card rounded-2xl p-6 flex flex-col justify-between group border-l-4 border-[#FFD43B]">
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-4">
+<div class="icon-box bg-[#FFD43B] bg-opacity-20 text-[#FFD43B]">
+<i class="fas fa-brain"></i>
+</div>
+<div>
+<h3 class="font-['Montserrat'] font-bold text-xl text-white mb-1">IA y Machine Learning</h3>
+<p class="font-['Open_Sans'] text-gray-400 text-sm leading-relaxed max-w-xs">
+                                    Líder indiscutible en ciencia de datos, redes neuronales y visión por computador.
+                                </p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-gray-700">
+<p class="text-xs text-gray-500 mb-2 font-bold uppercase">Librerías clave:</p>
+<div class="flex flex-wrap gap-2">
+<span class="tech-badge border border-yellow-900 text-yellow-200">PyTorch</span>
+<span class="tech-badge border border-yellow-900 text-yellow-200">TensorFlow</span>
+<span class="tech-badge border border-yellow-900 text-yellow-200">Pandas</span>
+<span class="tech-badge border border-yellow-900 text-yellow-200">NumPy</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Automation -->
+<div class="glass-card rounded-2xl p-6 flex flex-col justify-between group border-l-4 border-green-500">
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-4">
+<div class="icon-box bg-green-500 bg-opacity-20 text-green-400">
+<i class="fas fa-robot"></i>
+</div>
+<div>
+<h3 class="font-['Montserrat'] font-bold text-xl text-white mb-1">Automatización y Scripts</h3>
+<p class="font-['Open_Sans'] text-gray-400 text-sm leading-relaxed max-w-xs">
+                                    Web scraping, bots, tareas repetitivas (RPA) y pipelines de DevOps.
+                                </p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-gray-700">
+<p class="text-xs text-gray-500 mb-2 font-bold uppercase">Herramientas clave:</p>
+<div class="flex flex-wrap gap-2">
+<span class="tech-badge border border-green-900 text-green-200">Selenium</span>
+<span class="tech-badge border border-green-900 text-green-200">Beautiful Soup</span>
+<span class="tech-badge border border-green-900 text-green-200">Ansible</span>
+</div>
+</div>
+</div>
+<!-- Card 4: Video Games -->
+<div class="glass-card rounded-2xl p-6 flex flex-col justify-between group border-l-4 border-purple-500">
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-4">
+<div class="icon-box bg-purple-500 bg-opacity-20 text-purple-400">
+<i class="fas fa-gamepad"></i>
+</div>
+<div>
+<h3 class="font-['Montserrat'] font-bold text-xl text-white mb-1">Videojuegos y 3D</h3>
+<p class="font-['Open_Sans'] text-gray-400 text-sm leading-relaxed max-w-xs">
+                                    Prototipado rápido de juegos y scripting para motores gráficos y de renderizado.
+                                </p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-gray-700">
+<p class="text-xs text-gray-500 mb-2 font-bold uppercase">Herramientas clave:</p>
+<div class="flex flex-wrap gap-2">
+<span class="tech-badge border border-purple-900 text-purple-200">Pygame</span>
+<span class="tech-badge border border-purple-900 text-purple-200">Blender API</span>
+<span class="tech-badge border border-purple-900 text-purple-200">Godot</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+    <!-- Page Number -->
+    <div class="absolute bottom-6 right-16 text-gray-600 font-['Fira_Code'] text-xs">
+            03 // USOS
+        </div>
+    <!-- Navigation Buttons -->
+    <div class="absolute bottom-6 left-16 flex gap-3 z-20">
+        <a href="index1.html" class="flex items-center gap-2 bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-all font-['Open_Sans'] text-sm font-semibold shadow-lg">
+            <i class="fas fa-arrow-left"></i> Anterior
+        </a>
+        <a href="index3.html" class="flex items-center gap-2 bg-[#3776AB] hover:bg-[#2b5d88] text-white px-5 py-2 rounded-lg transition-all font-['Open_Sans'] text-sm font-semibold shadow-lg">
+            Siguiente <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+</body>
+</html>

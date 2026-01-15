@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Empresas que usan Python</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@300;400;600&amp;family=Fira+Code:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 1280px;
+            height: 720px;
+            background-color: #0f172a;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: #0f172a;
+            color: white;
+            overflow: hidden;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            background: rgba(30, 41, 59, 0.9);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        }
+        .tag-pill {
+            font-family: 'Fira Code', monospace;
+            font-size: 0.65rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #94a3b8;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .logo-container {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Decorative Background Elements -->
+<div class="absolute -top-20 -right-20 w-[600px] h-[600px] bg-[#3776AB] rounded-full filter blur-[100px] opacity-10 pointer-events-none"></div>
+<div class="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-[#FFD43B] rounded-full filter blur-[80px] opacity-5 pointer-events-none"></div>
+<!-- Header Section -->
+<div class="px-16 pt-10 pb-4 z-10 flex justify-between items-end">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<span class="bg-gray-700 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Casos de Éxito</span>
+<span class="text-gray-400 text-xs font-['Open_Sans']">Adopción Global</span>
+</div>
+<h2 class="font-['Montserrat'] font-extrabold text-5xl text-white">
+                    Empresas que usan <span class="text-[#FFD43B]">Python</span>
+</h2>
+</div>
+<div class="text-right">
+<p class="font-['Open_Sans'] text-gray-400 text-sm max-w-md border-r-4 border-[#3776AB] pr-4">
+                    Gigantes tecnológicos que confían en la eficiencia y escalabilidad del lenguaje.
+                </p>
+</div>
+</div>
+<!-- Main Mosaic Content -->
+<div class="flex-1 px-16 pb-12 z-10 flex items-center justify-center">
+<div class="grid grid-cols-6 gap-6 w-full max-w-6xl">
+<!-- Google -->
+<div class="col-span-2 glass-card rounded-xl p-6 flex flex-col items-center text-center group border-t-4 border-blue-500">
+<div class="logo-container bg-white text-blue-600 shadow-lg">
+<i class="fab fa-google"></i>
+</div>
+<h3 class="font-['Montserrat'] font-bold text-xl text-white mb-2">Google</h3>
+<p class="font-['Open_Sans'] text-gray-300 text-xs mb-4 leading-relaxed">
+                        "Python ha sido una parte importante de Google desde el principio."
+                    </p>
+<div class="flex flex-wrap justify-center gap-2 mt-auto">
+<span class="tag-pill">Búsqueda</span>
+<span class="tag-pill">IA</span>
+<span class="tag-pill">Automatización</span>
+</div>
+</div>
+<!-- Netflix -->
+<div class="col-span-2 glass-card rounded-xl p-6 flex flex-col items-center text-center group border-t-4 border-red-600">
+<div class="logo-container bg-black text-red-600 border border-gray-800 shadow-lg">
+<span class="font-['Montserrat'] font-black text-2xl tracking-tighter">N</span>
+</div>
+<h3 class="font-['Montserrat'] font-bold text-xl text-white mb-2">Netflix</h3>
+<p class="font-['Open_Sans'] text-gray-300 text-xs mb-4 leading-relaxed">
+                        Usa Python para el ciclo de vida completo del contenido.
+                    </p>
+<div class="flex flex-wrap justify-center gap-2 mt-auto">
+<span class="tag-pill">Data Science</span>
+<span class="tag-pill">Backend</span>
+<span class="tag-pill">Open Connect</span>
+</div>
+</div>
+<!-- Instagram -->
+<div class="col-span-2 glass-card rounded-xl p-6 flex flex-col items-center text-center group border-t-4 border-pink-500">
+<div class="logo-container bg-white text-pink-600 shadow-lg">
+<i class="fab fa-instagram"></i>
+</div>
+<h3 class="font-['Montserrat'] font-bold text-xl text-white mb-2">Instagram</h3>
+<p class="font-['Open_Sans'] text-gray-300 text-xs mb-4 leading-relaxed">
+                        Gestiona la mayor implementación de Django del mundo.
+                    </p>
+<div class="flex flex-wrap justify-center gap-2 mt-auto">
+<span class="tag-pill">Backend</span>
+<span class="tag-pill">Escalabilidad</span>
+<span class="tag-pill">Django</span>
+</div>
+</div>
+<!-- Spotify (Centered Bottom) -->
+<div class="col-start-2 col-span-2 glass-card rounded-xl p-6 flex flex-col items-center text-center group border-t-4 border-green-500 mt-2">
+<div class="logo-container bg-black text-green-500 border border-gray-800 shadow-lg">
+<i class="fab fa-spotify"></i>
+</div>
+<h3 class="font-['Montserrat'] font-bold text-xl text-white mb-2">Spotify</h3>
+<p class="font-['Open_Sans'] text-gray-300 text-xs mb-4 leading-relaxed">
+                        Análisis de datos para descubrir tu próxima canción favorita.
+                    </p>
+<div class="flex flex-wrap justify-center gap-2 mt-auto">
+<span class="tag-pill">Recomendaciones</span>
+<span class="tag-pill">Analytics</span>
+</div>
+</div>
+<!-- NASA (Centered Bottom) -->
+<div class="col-span-2 glass-card rounded-xl p-6 flex flex-col items-center text-center group border-t-4 border-blue-800 mt-2">
+<div class="logo-container bg-white text-blue-900 shadow-lg">
+<i class="fas fa-rocket"></i>
+</div>
+<h3 class="font-['Montserrat'] font-bold text-xl text-white mb-2">NASA</h3>
+<p class="font-['Open_Sans'] text-gray-300 text-xs mb-4 leading-relaxed">
+                        Procesamiento de imágenes y sistemas de control de misiones.
+                    </p>
+<div class="flex flex-wrap justify-center gap-2 mt-auto">
+<span class="tag-pill">Automatización</span>
+<span class="tag-pill">Ciencia</span>
+</div>
+</div>
+</div>
+</div>
+    <!-- Page Number -->
+    <div class="absolute bottom-6 right-16 text-gray-600 font-['Fira_Code'] text-xs">
+            04 // CASOS
+        </div>
+    <!-- Navigation Buttons -->
+    <div class="absolute bottom-6 left-16 flex gap-3 z-20">
+        <a href="index2.html" class="flex items-center gap-2 bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-all font-['Open_Sans'] text-sm font-semibold shadow-lg">
+            <i class="fas fa-arrow-left"></i> Anterior
+        </a>
+        <a href="index4.html" class="flex items-center gap-2 bg-[#3776AB] hover:bg-[#2b5d88] text-white px-5 py-2 rounded-lg transition-all font-['Open_Sans'] text-sm font-semibold shadow-lg">
+            Siguiente <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+</body>
+</html>

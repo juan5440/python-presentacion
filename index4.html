@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Por qué aprenderlo en 2026</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@300;400;600&amp;family=Fira+Code:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 1280px;
+            height: 720px;
+            background-color: #0f172a;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            position: relative;
+            background-color: #0f172a;
+            color: white;
+            overflow: hidden;
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .glass-highlight {
+            background: linear-gradient(90deg, rgba(55, 118, 171, 0.1) 0%, rgba(30, 41, 59, 0) 100%); /* Fallback mostly, keeping subtle */
+            background: rgba(55, 118, 171, 0.15); /* Solid alternative */
+            border-left: 4px solid #3776AB;
+        }
+        .stat-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+        }
+        .code-pill {
+            font-family: 'Fira Code', monospace;
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: #FFD43B;
+        }
+        .bar-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 9999px;
+            height: 8px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .bar-fill {
+            height: 100%;
+            border-radius: 9999px;
+            transition: width 1s ease-out;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Decorative Background Elements -->
+<div class="absolute top-[-100px] left-[-100px] w-[600px] h-[600px] bg-[#3776AB] rounded-full filter blur-[120px] opacity-10 pointer-events-none"></div>
+<div class="absolute bottom-[-100px] right-[-100px] w-[500px] h-[500px] bg-[#FFD43B] rounded-full filter blur-[100px] opacity-5 pointer-events-none"></div>
+<!-- Main Content Wrapper -->
+<div class="flex w-full h-full px-16 py-10 z-10 relative">
+<!-- Left Column: Reasons -->
+<div class="w-7/12 flex flex-col pr-12">
+<!-- Header -->
+<div class="mb-8">
+<div class="flex items-center gap-3 mb-2">
+<span class="bg-[#3776AB] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Futuro</span>
+<span class="text-gray-400 text-xs font-['Open_Sans']">Tendencias 2026</span>
+</div>
+<h2 class="font-['Montserrat'] font-extrabold text-5xl text-white leading-tight">
+                        Por qué aprenderlo <br/><span class="text-[#FFD43B]">en 2026</span>
+</h2>
+</div>
+<!-- List Items -->
+<div class="flex flex-col gap-5">
+<!-- Reason 1: Demand -->
+<div class="glass-panel p-4 rounded-xl flex items-start gap-4 hover:bg-opacity-50 transition-colors">
+<div class="w-10 h-10 rounded-lg bg-blue-500 bg-opacity-20 flex items-center justify-center flex-shrink-0 text-blue-400 mt-1">
+<i class="fas fa-briefcase"></i>
+</div>
+<div>
+<h3 class="font-['Montserrat'] font-bold text-lg text-white">Alta Demanda Laboral</h3>
+<p class="font-['Open_Sans'] text-gray-400 text-sm mt-1">
+                                Habilidad esencial para roles en Data Science, IA Generativa y Backend. Las empresas buscan perfiles híbridos que dominen Python.
+                            </p>
+</div>
+</div>
+<!-- Reason 2: Performance (New) -->
+<div class="glass-panel glass-highlight p-4 rounded-xl flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-[#FFD43B] bg-opacity-20 flex items-center justify-center flex-shrink-0 text-[#FFD43B] mt-1">
+<i class="fas fa-tachometer-alt"></i>
+</div>
+<div>
+<h3 class="font-['Montserrat'] font-bold text-lg text-white flex items-center gap-2">
+                                Rendimiento en Ascenso 
+                                <span class="text-[0.6rem] bg-yellow-500 text-black px-2 py-0.5 rounded font-bold uppercase">Nuevo</span>
+</h3>
+<p class="font-['Open_Sans'] text-gray-300 text-sm mt-1">
+<span class="code-pill">PEP 703</span> elimina el GIL (Global Interpreter Lock), permitiendo <strong>free-threading</strong> y ejecución paralela real en CPUs multicore.
+                            </p>
+</div>
+</div>
+<!-- Reason 3: Ecosystem -->
+<div class="glass-panel p-4 rounded-xl flex items-start gap-4 hover:bg-opacity-50 transition-colors">
+<div class="w-10 h-10 rounded-lg bg-green-500 bg-opacity-20 flex items-center justify-center flex-shrink-0 text-green-400 mt-1">
+<i class="fas fa-tree"></i>
+</div>
+<div>
+<h3 class="font-['Montserrat'] font-bold text-lg text-white">Ecosistema Maduro</h3>
+<p class="font-['Open_Sans'] text-gray-400 text-sm mt-1">
+                                Herramientas consolidadas como <span class="code-pill">Django 6.0</span>, <span class="code-pill">FastAPI</span> y la suite de IA (<span class="code-pill">PyTorch</span>) aceleran el desarrollo.
+                            </p>
+</div>
+</div>
+<!-- Reason 4: Interoperability -->
+<div class="glass-panel p-4 rounded-xl flex items-start gap-4 hover:bg-opacity-50 transition-colors">
+<div class="w-10 h-10 rounded-lg bg-purple-500 bg-opacity-20 flex items-center justify-center flex-shrink-0 text-purple-400 mt-1">
+<i class="fas fa-network-wired"></i>
+</div>
+<div>
+<h3 class="font-['Montserrat'] font-bold text-lg text-white">Interoperabilidad Cloud</h3>
+<p class="font-['Open_Sans'] text-gray-400 text-sm mt-1">
+                                Integración nativa con Rust/C++ para performance crítica y despliegue simple en AWS Lambda, Azure y Google Cloud.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Stats & Visuals -->
+<div class="w-5/12 flex flex-col gap-6 justify-center">
+<!-- Stat Card: Popularity -->
+<div class="glass-panel p-6 rounded-2xl relative overflow-hidden">
+<div class="flex justify-between items-end mb-4">
+<div>
+<p class="text-gray-400 text-xs uppercase font-bold tracking-wider mb-1">Ranking Popularidad (TIOBE)</p>
+<h3 class="text-3xl font-['Montserrat'] font-bold text-white">#1 Global</h3>
+</div>
+<i class="fas fa-trophy text-[#FFD43B] text-4xl opacity-80"></i>
+</div>
+<!-- Chart Bars -->
+<div class="space-y-4 font-['Fira_Code'] text-xs">
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-white font-bold">Python</span>
+<span class="text-[#FFD43B]">19.2%</span>
+</div>
+<div class="bar-container">
+<div class="bar-fill bg-[#3776AB]" style="width: 85%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-400">C</span>
+<span class="text-gray-500">10.8%</span>
+</div>
+<div class="bar-container">
+<div class="bar-fill bg-gray-600" style="width: 45%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-400">Java</span>
+<span class="text-gray-500">8.9%</span>
+</div>
+<div class="bar-container">
+<div class="bar-fill bg-gray-600" style="width: 38%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Highlight Card: GitHub Growth -->
+<div class="glass-panel p-6 rounded-2xl flex flex-col justify-center items-center text-center relative border-t-4 border-green-500">
+<div class="absolute top-4 right-4 text-green-500 opacity-20 text-5xl">
+<i class="fab fa-github"></i>
+</div>
+<p class="text-gray-400 text-xs uppercase font-bold tracking-wider mb-2">Crecimiento en GitHub</p>
+<div class="flex items-baseline gap-2">
+<span class="text-5xl font-['Montserrat'] font-extrabold text-white">+22%</span>
+<span class="text-green-400 font-bold"><i class="fas fa-arrow-up text-sm"></i> YoY</span>
+</div>
+<p class="text-gray-400 text-sm mt-2 max-w-xs">
+                        Lenguaje preferido para proyectos Open Source de Inteligencia Artificial.
+                    </p>
+</div>
+<!-- Highlight Card: Tech Stack -->
+<div class="glass-panel p-5 rounded-2xl border-t-4 border-purple-500">
+<p class="text-gray-400 text-xs uppercase font-bold tracking-wider mb-3">Stack Tecnológico Moderno</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-[#1e293b] text-white rounded-md text-xs font-['Fira_Code'] border border-gray-600">Docker</span>
+<span class="px-3 py-1.5 bg-[#1e293b] text-white rounded-md text-xs font-['Fira_Code'] border border-gray-600">Kubernetes</span>
+<span class="px-3 py-1.5 bg-[#3776AB] text-white rounded-md text-xs font-['Fira_Code'] border border-[#3776AB]">Python 3.13</span>
+<span class="px-3 py-1.5 bg-[#1e293b] text-white rounded-md text-xs font-['Fira_Code'] border border-gray-600">Rust</span>
+</div>
+</div>
+</div>
+</div>
+    <!-- Page Number -->
+    <div class="absolute bottom-6 right-16 text-gray-600 font-['Fira_Code'] text-xs">
+            05 // FUTURO
+        </div>
+    <!-- Navigation Buttons -->
+    <div class="absolute bottom-6 left-16 flex gap-3 z-20">
+        <a href="index3.html" class="flex items-center gap-2 bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-all font-['Open_Sans'] text-sm font-semibold shadow-lg">
+            <i class="fas fa-arrow-left"></i> Anterior
+        </a>
+        <a href="index5.html" class="flex items-center gap-2 bg-[#3776AB] hover:bg-[#2b5d88] text-white px-5 py-2 rounded-lg transition-all font-['Open_Sans'] text-sm font-semibold shadow-lg">
+            Siguiente <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+</body>
+</html>

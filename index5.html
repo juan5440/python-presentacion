@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Casos de uso reales</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@300;400;600&amp;family=Fira+Code:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 1280px;
+            height: 720px;
+            background-color: #0f172a;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            position: relative;
+            background-color: #0f172a;
+            color: white;
+            overflow: hidden;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .code-window {
+            background: #1e293b;
+            border-radius: 0.75rem;
+            border: 1px solid #334155;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+            font-family: 'Fira Code', monospace;
+            overflow: hidden;
+        }
+        .code-header {
+            background: #0f172a;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #334155;
+        }
+        .window-controls {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .control {
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 9999px;
+        }
+        .feature-item {
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        .feature-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-left-color: #3776AB;
+            padding-left: 1rem;
+        }
+        .bar-chart-bar {
+            transition: height 1s ease-out;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Ambient Effects -->
+<div class="absolute top-0 left-0 w-[600px] h-[600px] bg-[#3776AB] rounded-full filter blur-[120px] opacity-10 pointer-events-none"></div>
+<div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#FFD43B] rounded-full filter blur-[100px] opacity-5 pointer-events-none"></div>
+<!-- Main Content Split -->
+<div class="flex w-full h-full z-10">
+<!-- Left Column: Visuals (50%) -->
+<div class="w-1/2 h-full flex items-center justify-center p-12 relative">
+<!-- Abstract Connection Lines (SVG) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" xmlns="http://www.w3.org/2000/svg">
+<line stroke="#3776AB" stroke-dasharray="5,5" stroke-width="2" x1="200" x2="600" y1="200" y2="400"></line>
+<line stroke="#FFD43B" stroke-dasharray="5,5" stroke-width="2" x1="600" x2="300" y1="200" y2="500"></line>
+</svg>
+<!-- Floating Dashboard Card (Top Right) -->
+<div class="glass-card absolute top-20 right-16 w-72 rounded-xl p-4 z-20 transform rotate-2 animate-pulse-slow">
+<div class="flex justify-between items-center mb-3">
+<p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Análisis de Ventas</p>
+<i class="fas fa-chart-line text-green-400"></i>
+</div>
+<div class="flex items-end justify-between h-24 gap-2">
+<div class="w-1/5 bg-gray-700 h-full relative rounded-sm overflow-hidden bg-opacity-30">
+<div class="absolute bottom-0 w-full bg-[#3776AB]" style="height: 40%;"></div>
+</div>
+<div class="w-1/5 bg-gray-700 h-full relative rounded-sm overflow-hidden bg-opacity-30">
+<div class="absolute bottom-0 w-full bg-[#3776AB]" style="height: 65%;"></div>
+</div>
+<div class="w-1/5 bg-gray-700 h-full relative rounded-sm overflow-hidden bg-opacity-30">
+<div class="absolute bottom-0 w-full bg-[#FFD43B]" style="height: 85%;"></div>
+</div>
+<div class="w-1/5 bg-gray-700 h-full relative rounded-sm overflow-hidden bg-opacity-30">
+<div class="absolute bottom-0 w-full bg-[#3776AB]" style="height: 55%;"></div>
+</div>
+<div class="w-1/5 bg-gray-700 h-full relative rounded-sm overflow-hidden bg-opacity-30">
+<div class="absolute bottom-0 w-full bg-[#3776AB]" style="height: 70%;"></div>
+</div>
+</div>
+</div>
+<!-- Main Code Window (Center/Bottom) -->
+<div class="code-window w-[420px] relative z-30 transform -rotate-1 shadow-2xl">
+<div class="code-header">
+<div class="window-controls">
+<div class="control bg-red-500"></div>
+<div class="control bg-yellow-500"></div>
+<div class="control bg-green-500"></div>
+</div>
+<p class="ml-4 text-xs text-gray-400 font-sans">app_recommendation.py</p>
+</div>
+<div class="p-5 text-sm leading-relaxed">
+<p class="text-gray-500"># Modelo de Recomendación IA</p>
+<p class="mt-2"><span class="text-purple-400">import</span> <span class="text-white">torch</span></p>
+<p><span class="text-purple-400">from</span> <span class="text-white">fastapi</span> <span class="text-purple-400">import</span> <span class="text-white">FastAPI</span></p>
+<br/>
+<p><span class="text-blue-400">class</span> <span class="text-yellow-300">Recommender</span>(<span class="text-green-300">nn.Module</span>):</p>
+<p class="pl-4 text-gray-400">def forward(self, x):</p>
+<p class="pl-8 text-white"><span class="text-purple-400">return</span> self.layers(x)</p>
+<br/>
+<p><span class="text-blue-400">@app.get</span>(<span class="text-green-300">"/predict/{user_id}"</span>)</p>
+<p><span class="text-blue-400">async def</span> <span class="text-yellow-300">get_songs</span>(user_id):</p>
+<p class="pl-4 text-gray-400"># Predecir próxima canción</p>
+<p class="pl-4"><span class="text-purple-400">return</span> model.predict(user_id)</p>
+</div>
+</div>
+<!-- Floating Badge (Bottom Left) -->
+<div class="absolute bottom-24 left-16 bg-[#1e293b] border border-gray-600 rounded-lg px-4 py-2 flex items-center gap-3 z-40 shadow-xl">
+<div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+<div>
+<p class="text-[10px] text-gray-400 uppercase font-bold">Status</p>
+<p class="text-xs font-mono text-white">API Online: 45ms</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Text Content (50%) -->
+<div class="w-1/2 h-full flex flex-col justify-center pr-16 pl-4">
+<div class="mb-10">
+<div class="flex items-center gap-3 mb-3">
+<span class="bg-[#3776AB] bg-opacity-20 text-[#3776AB] border border-[#3776AB] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Aplicaciones</span>
+<span class="text-gray-400 text-xs font-['Open_Sans']">Ejemplos Prácticos</span>
+</div>
+<h2 class="font-['Montserrat'] font-extrabold text-5xl text-white leading-tight">
+                        Casos de Uso <br/><span class="text-[#FFD43B]">Reales</span>
+</h2>
+</div>
+<!-- List of Use Cases -->
+<div class="space-y-6">
+<!-- Case 1: AI -->
+<div class="feature-item rounded-r-xl p-3">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-lg bg-purple-500 bg-opacity-20 flex items-center justify-center flex-shrink-0 text-purple-400">
+<i class="fas fa-brain text-xl"></i>
+</div>
+<div>
+<h3 class="font-['Montserrat'] font-bold text-lg text-white">IA y Recomendaciones</h3>
+<p class="font-['Open_Sans'] text-gray-400 text-sm mt-1 leading-relaxed">
+                                    Empresas como <strong>Spotify</strong> y <strong>Netflix</strong> utilizan librerías como <span class="text-purple-300 font-['Fira_Code'] text-xs">PyTorch</span> para personalizar el contenido que ves.
+                                </p>
+</div>
+</div>
+</div>
+<!-- Case 2: Automation -->
+<div class="feature-item rounded-r-xl p-3">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-lg bg-green-500 bg-opacity-20 flex items-center justify-center flex-shrink-0 text-green-400">
+<i class="fas fa-cogs text-xl"></i>
+</div>
+<div>
+<h3 class="font-['Montserrat'] font-bold text-lg text-white">Automatización de Procesos</h3>
+<p class="font-['Open_Sans'] text-gray-400 text-sm mt-1 leading-relaxed">
+                                    Scripts que integran APIs para enviar reportes automáticos, gestionar inventarios o realizar web scraping.
+                                </p>
+</div>
+</div>
+</div>
+<!-- Case 3: Data Analysis -->
+<div class="feature-item rounded-r-xl p-3">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-lg bg-[#FFD43B] bg-opacity-20 flex items-center justify-center flex-shrink-0 text-[#FFD43B]">
+<i class="fas fa-chart-pie text-xl"></i>
+</div>
+<div>
+<h3 class="font-['Montserrat'] font-bold text-lg text-white">Análisis de Datos</h3>
+<p class="font-['Open_Sans'] text-gray-400 text-sm mt-1 leading-relaxed">
+                                    Creación de dashboards interactivos en tiempo real utilizando <span class="text-yellow-200 font-['Fira_Code'] text-xs">Pandas</span> y <span class="text-yellow-200 font-['Fira_Code'] text-xs">Plotly</span> para la toma de decisiones.
+                                </p>
+</div>
+</div>
+</div>
+<!-- Case 4: Cloud API -->
+<div class="feature-item rounded-r-xl p-3">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-lg bg-blue-500 bg-opacity-20 flex items-center justify-center flex-shrink-0 text-blue-400">
+<i class="fas fa-cloud text-xl"></i>
+</div>
+<div>
+<h3 class="font-['Montserrat'] font-bold text-lg text-white">Backend en la Nube</h3>
+<p class="font-['Open_Sans'] text-gray-400 text-sm mt-1 leading-relaxed">
+                                    Despliegue de microservicios REST de alto rendimiento con <span class="text-blue-300 font-['Fira_Code'] text-xs">FastAPI</span> en AWS o Google Cloud.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+    <!-- Page Number -->
+    <div class="absolute bottom-6 right-16 text-gray-600 font-['Fira_Code'] text-xs">
+            06 // EJEMPLOS
+        </div>
+    <!-- Navigation Buttons -->
+    <div class="absolute bottom-6 left-16 flex gap-3 z-20">
+        <a href="index4.html" class="flex items-center gap-2 bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-all font-['Open_Sans'] text-sm font-semibold shadow-lg">
+            <i class="fas fa-arrow-left"></i> Anterior
+        </a>
+        <a href="index6.html" class="flex items-center gap-2 bg-[#3776AB] hover:bg-[#2b5d88] text-white px-5 py-2 rounded-lg transition-all font-['Open_Sans'] text-sm font-semibold shadow-lg">
+            Siguiente <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+</body>
+</html>

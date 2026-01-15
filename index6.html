@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Da el primer paso con Python</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@300;400;600&amp;family=Fira+Code:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 1280px;
+            height: 720px;
+            background-color: #0f172a;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: #0f172a;
+            color: white;
+            overflow: hidden;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(55, 118, 171, 0.4);
+        }
+        .step-circle {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            z-index: 10;
+        }
+        .timeline-line {
+            position: absolute;
+            top: 1.5rem;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: rgba(255, 255, 255, 0.1);
+            z-index: 0;
+        }
+        .code-snippet {
+            font-family: 'Fira Code', monospace;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            color: #FFD43B;
+            font-size: 0.8rem;
+        }
+        .cta-button {
+            background-color: #3776AB;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px 0 rgba(55, 118, 171, 0.39);
+        }
+        .cta-button:hover {
+            background-color: #2b5d88;
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px 0 rgba(55, 118, 171, 0.23);
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Decorative Background -->
+<div class="absolute top-0 left-0 w-[800px] h-[800px] bg-[#3776AB] rounded-full filter blur-[150px] opacity-10 pointer-events-none"></div>
+<div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#FFD43B] rounded-full filter blur-[120px] opacity-5 pointer-events-none"></div>
+<!-- Main Content -->
+<div class="flex-1 flex flex-col items-center justify-center z-10 px-16 py-8">
+<!-- Header -->
+<div class="text-center mb-12">
+<div class="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full bg-white bg-opacity-5 border border-white border-opacity-10">
+<span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+<span class="text-xs font-['Fira_Code'] text-gray-300 uppercase tracking-wider">Roadmap 2026</span>
+</div>
+<h1 class="font-['Montserrat'] font-extrabold text-6xl text-white mb-4 leading-tight">
+                    Da el primer paso con <span class="text-[#FFD43B]">Python</span>
+</h1>
+<p class="font-['Open_Sans'] text-xl text-gray-300 max-w-2xl mx-auto">
+                    Tu viaje desde "Hola Mundo" hasta construir soluciones de IA comienza hoy.
+                </p>
+</div>
+<!-- Learning Path Timeline -->
+<div class="w-full max-w-5xl mb-12 relative">
+<div class="timeline-line"></div>
+<div class="grid grid-cols-4 gap-4">
+<!-- Step 1: Install -->
+<div class="relative flex flex-col items-center text-center group">
+<div class="step-circle bg-[#3776AB] text-white shadow-[0_0_15px_rgba(55,118,171,0.5)] mb-4 group-hover:scale-110 transition-transform">
+<i class="fas fa-download"></i>
+</div>
+<div class="glass-card p-5 rounded-xl w-full h-full border-t-4 border-[#3776AB]">
+<h3 class="font-['Montserrat'] font-bold text-white mb-2">Preparación</h3>
+<p class="font-['Open_Sans'] text-sm text-gray-400 mb-3">Instala el entorno moderno.</p>
+<div class="flex flex-col gap-2 items-center">
+<span class="code-snippet">Python 3.12+</span>
+<span class="code-snippet">VS Code</span>
+<span class="code-snippet">pipx</span>
+</div>
+</div>
+</div>
+<!-- Step 2: Fundamentals -->
+<div class="relative flex flex-col items-center text-center group">
+<div class="step-circle bg-[#2b5d88] text-white border-2 border-[#3776AB] mb-4 group-hover:scale-110 transition-transform">
+<span class="text-lg font-['Fira_Code']">01</span>
+</div>
+<div class="glass-card p-5 rounded-xl w-full h-full">
+<h3 class="font-['Montserrat'] font-bold text-white mb-2">Fundamentos</h3>
+<p class="font-['Open_Sans'] text-sm text-gray-400 mb-2">Semanas 1-2</p>
+<p class="font-['Open_Sans'] text-xs text-gray-500 leading-relaxed">
+                                Variables, Bucles, Funciones y POO básico. La base sólida.
+                            </p>
+</div>
+</div>
+<!-- Step 3: Specialization -->
+<div class="relative flex flex-col items-center text-center group">
+<div class="step-circle bg-[#FFD43B] text-black border-2 border-yellow-600 mb-4 group-hover:scale-110 transition-transform">
+<span class="text-lg font-['Fira_Code']">02</span>
+</div>
+<div class="glass-card p-5 rounded-xl w-full h-full border-t-4 border-[#FFD43B]">
+<h3 class="font-['Montserrat'] font-bold text-white mb-2">Especialización</h3>
+<p class="font-['Open_Sans'] text-sm text-gray-400 mb-2">Semanas 3-4</p>
+<p class="font-['Open_Sans'] text-xs text-gray-500 leading-relaxed">
+                                Elige tu camino: Web con <strong class="text-white">FastAPI</strong> o Datos con <strong class="text-white">Pandas</strong>.
+                            </p>
+</div>
+</div>
+<!-- Step 4: Project -->
+<div class="relative flex flex-col items-center text-center group">
+<div class="step-circle bg-green-500 text-white border-2 border-green-600 mb-4 group-hover:scale-110 transition-transform">
+<i class="fas fa-flag-checkered"></i>
+</div>
+<div class="glass-card p-5 rounded-xl w-full h-full border-t-4 border-green-500">
+<h3 class="font-['Montserrat'] font-bold text-white mb-2">Proyecto Final</h3>
+<p class="font-['Open_Sans'] text-sm text-gray-400 mb-2">Día 30</p>
+<p class="font-['Open_Sans'] text-xs text-gray-500 leading-relaxed">
+                                Construye algo real y súbelo a GitHub. ¡Tu portafolio empieza aquí!
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Resources & CTA -->
+<div class="flex flex-col items-center gap-8 w-full">
+<!-- Resources Pills -->
+<div class="flex gap-4">
+<div class="flex items-center gap-2 text-gray-400 text-sm font-['Fira_Code'] px-4 py-2 rounded-lg border border-gray-700 hover:bg-white hover:bg-opacity-5 transition-colors cursor-pointer">
+<i class="fab fa-github text-white"></i>
+<span>repo/python-starter</span>
+</div>
+<div class="flex items-center gap-2 text-gray-400 text-sm font-['Fira_Code'] px-4 py-2 rounded-lg border border-gray-700 hover:bg-white hover:bg-opacity-5 transition-colors cursor-pointer">
+<i class="fas fa-book text-blue-400"></i>
+<span>Docs Oficiales</span>
+</div>
+<div class="flex items-center gap-2 text-gray-400 text-sm font-['Fira_Code'] px-4 py-2 rounded-lg border border-gray-700 hover:bg-white hover:bg-opacity-5 transition-colors cursor-pointer">
+<i class="fab fa-discord text-[#5865F2]"></i>
+<span>Comunidad Python ES</span>
+</div>
+</div>
+<!-- Main CTA Button -->
+<button class="cta-button font-['Montserrat'] font-bold text-lg px-10 py-4 rounded-full flex items-center gap-3 group">
+<span>Empieza hoy y crea tu proyecto</span>
+<i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+</button>
+<p class="text-xs text-gray-500 font-['Open_Sans'] mt-2">
+                    * La mejor manera de aprender es escribiendo código.
+                </p>
+</div>
+</div>
+    <!-- Footer / Page Number -->
+    <div class="absolute bottom-6 right-16 text-gray-600 font-['Fira_Code'] text-xs">
+            07 // START
+        </div>
+    <!-- Navigation Buttons -->
+    <div class="absolute bottom-6 left-16 flex gap-3 z-20">
+        <a href="index5.html" class="flex items-center gap-2 bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-all font-['Open_Sans'] text-sm font-semibold shadow-lg">
+            <i class="fas fa-arrow-left"></i> Anterior
+        </a>
+        <a href="index.html" class="flex items-center gap-2 bg-[#FFD43B] hover:bg-yellow-500 text-black px-5 py-2 rounded-lg transition-all font-['Open_Sans'] text-sm font-semibold shadow-lg">
+            <i class="fas fa-home"></i> Inicio
+        </a>
+    </div>
+</div>
+</body>
+</html>
